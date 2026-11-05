@@ -1458,18 +1458,10 @@ void ScreenshotOverlay::setMarkWidth(int lineWidth)
 {
     markWidth = qBound(MIN_MARK_WIDTH, lineWidth, MAX_MARK_WIDTH);
 
-    // 形状类标注的边线粗细实时跟随滑杆：调粗细就是调"当前的画笔设置"，
-    // 已画的形状马上变粗变细。画笔笔迹和文本保持画下时的样子不动
-    for (MarkShape &shape : shapes) {
-        if (shape.tool == MarkTool::Rectangle || shape.tool == MarkTool::Ellipse
-            || shape.tool == MarkTool::Triangle || shape.tool == MarkTool::Line) {
-            shape.lineWidth = markWidth;
-        }
-    }
-
+    // 只影响"接下来画的"：每条标注都记着自己画下时的粗细，
+    // 调滑杆不会回头去改已经画好的东西（和文字标注的规则一致）
     syncWidthPanel();
     updateWidthButtonIcon();
-    update();
 }
 
 void ScreenshotOverlay::setEraserRadius(int radius)
@@ -1578,17 +1570,9 @@ void ScreenshotOverlay::chooseMarkColor()
 
     markColor = chosen;
 
-    // 已经画好的画笔和形状一起换色：改完立刻能看到效果，
-    // 也避免出现“颜色改了但画面没变化”的困惑。文字有自己的颜色，跳过
-    for (MarkShape &shape : shapes) {
-        if (shape.tool == MarkTool::Text) {
-            continue;
-        }
-        shape.color = markColor;
-    }
-
+    // 只影响"接下来画的"：每条标注都记着自己画下时的颜色，
+    // 改当前颜色不会把已经画好的笔迹和形状一起改掉
     updateColorButtonStyle();
-    update();
 }
 
 void ScreenshotOverlay::placeToolBar()
