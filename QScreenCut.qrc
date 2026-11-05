@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="QScreenCut">
+        <file>images/关闭1.png</file>
+        <file>images/图钉.png</file>
+        <file>images/圆形未选中.png</file>
+        <file>images/复制.png</file>
+        <file>images/形状-三角形.png</file>
+        <file>images/方形未选中.png</file>
+        <file>images/最大化.png</file>
+        <file>images/最大化 (1).png</file>
+        <file>images/最小化.png</file>
+        <file>images/fileicons/app-window.svg</file>
+        <file>images/fileicons/arrow-back-up.svg</file>
+        <file>images/fileicons/clipboard-fill.svg</file>
+        <file>images/fileicons/clipboard-line.svg</file>
+        <file>images/fileicons/check.svg</file>
+        <file>images/fileicons/code.svg</file>
+        <file>images/fileicons/device-floppy.svg</file>
+        <file>images/fileicons/eraser.svg</file>
+        <file>images/fileicons/file-text.svg</file>
+        <file>images/fileicons/file-type-doc.svg</file>
+        <file>images/fileicons/file-type-pdf.svg</file>
+        <file>images/fileicons/file-type-ppt.svg</file>
+        <file>images/fileicons/file-type-xls.svg</file>
+        <file>images/fileicons/file-type-zip.svg</file>
+        <file>images/fileicons/file.svg</file>
+        <file>images/fileicons/folder.svg</file>
+        <file>images/fileicons/language.svg</file>
+        <file>images/fileicons/line.svg</file>
+        <file>images/fileicons/movie.svg</file>
+        <file>images/fileicons/music.svg</file>
+        <file>images/fileicons/pencil.svg</file>
+        <file>images/fileicons/photo.svg</file>
+        <file>images/fileicons/typography.svg</file>
+        <file>QScreenCut.ico</file>
+    </qresource>
+</RCC>
