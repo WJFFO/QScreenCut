@@ -72,6 +72,9 @@ third_party\verify-build.bat
 
 （脚本手工调用 moc/rcc/cl/link，产物在 `build-verify` 目录，不影响 Visual Studio 的构建）
 
+> 注意：`third_party` 下的两个脚本把 MSVC / Windows SDK / Qt 的路径写死成了开发机的绝对路径
+> （`D://Microsoft Visual Studio\...`、`D://Qt//6.11.0//msvc2022_64`），换机器运行前先改成你自己的路径。
+
 ## 数据与隐私
 
 程序自身是绿色免安装的，所有数据都在 exe 同级的 `data` 目录里：
